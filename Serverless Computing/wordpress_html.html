@@ -8,21 +8,27 @@
   {
     window.open('https://fnsmc6sdja.execute-api.us-east-1.amazonaws.com/prob/')
   }
+  function updateIframe() 
+  {
+    document.getElementById('myiframe').src = 'https://fnsmc6sdja.execute-api.us-east-1.amazonaws.com/prob/'
+  }
 </script>
 
 </head>
 
 <body>
 
-<H2> There are two parts, including a button and an IFrame </H2>
+<H2> There are two parts, including a button and an IFrame with a button</H2>
 <hr>
+<br>
 <p> This is a button which links to AWS Gateway Rest API Invoke URL </p>
-<input type="button" value="Open URL" onclick="openURL()">
+<input type="button" value="Open  URL" onclick="openURL()">
 
 <br> <br> <br>
 
-<p> This is an IFrame which shows the objects AWS Lambda function return</p>
-<iframe src="https://fnsmc6sdja.execute-api.us-east-1.amazonaws.com/prob/" id="test1" width="600" height="90"></iframe>
+<p> This is an IFrame which shows the objects AWS Lambda return. Click "Updata  Time" can update the Iframe content</p>
+<input type="button" value="Updata  Time" onclick="updateIframe()">
+<iframe id="myiframe" src="https://fnsmc6sdja.execute-api.us-east-1.amazonaws.com/prob/" id="test1" width="600" height="90"></iframe>
 
 </body>
 
